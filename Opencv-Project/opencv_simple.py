@@ -1,0 +1,32 @@
+import cv2
+#pic = cv2.imread("ax.jpg")
+#cv2.imshow("pic",pic)
+#cv2.namedWindow('image_AUTOSIZE',cv2.WINDOW_AUTOSIZE)
+#cv2.imshow("image_AUTOSIZE",pic)
+#cv2.namedWindow('image_WINDOW_NORMAL',cv2.WINDOW_NORMAL)
+#cv2.imshow("image_WINDOW_NORMAL",pic)
+#cv2.imwrite("ax.png",pic)
+#-------------------------------#
+import numpy as np
+boom = cv2.imread("boom.jpg")
+boom = cv2.line(boom,(0,0),(200,200),(255,0,0),5)
+cv2.imshow("boom",boom)
+cv2.rectangle(boom,(100,50),(300,200),(0,255,0),3)
+cv2.imshow("boom",boom)
+cv2.circle(boom,(280,280),60,(0,0,255),)
+cv2.imshow("boom",boom)
+cv2.circle(boom,(280,280),60,(0,0,255),-1)
+cv2.imshow("boom",boom)
+cv2.ellipse(boom,(100,240),(80,30),0,0,180,255,-1)
+cv2.imshow("boom",boom)
+cv2.ellipse(boom,(50,240),(80,30),0,0,360,255,)
+cv2.imshow("boom",boom)
+pts = np.array([[10,5],[20,30],[20,20],[50,10]])
+boom = cv2.polylines(boom,[pts],True,(0,0,0))
+cv2.imshow("boom",boom)
+font = cv2.FONT_HERSHEY_COMPLEX
+boom = cv2.putText(boom,"opencv",(10,100),font,2,(250,0,250),2)
+cv2.imshow("boom",boom)
+#---------------------------------#
+cv2.waitKey(0)
+cv2.destroyAllWindows()
